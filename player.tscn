@@ -933,4 +933,4 @@ script = ExtResource("1_kwipl")
 sprite_frames = SubResource("SpriteFrames_xua3y")
 animation = &"run_upright"
 autoplay = "idle_down"
-frame_progress = 0.54591
+frame_progress = 0.13505
