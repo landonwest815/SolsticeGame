@@ -1,0 +1,84 @@
+[gd_scene load_steps=13 format=3 uid="uid://c6mb147tpigr3"]
+
+[ext_resource type="Texture2D" uid="uid://3mtrpq7h7ja3" path="res://player_spreadsheet.png" id="1_4loxr"]
+[ext_resource type="Script" path="res://player.gd" id="1_kwipl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7qs3"]
+atlas = ExtResource("1_4loxr")
+region = Rect2(0, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31xbl"]
+atlas = ExtResource("1_4loxr")
+region = Rect2(8, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbqqx"]
+atlas = ExtResource("1_4loxr")
+region = Rect2(16, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyj7o"]
+atlas = ExtResource("1_4loxr")
+region = Rect2(24, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c6vv"]
+atlas = ExtResource("1_4loxr")
+region = Rect2(32, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qvtx"]
+atlas = ExtResource("1_4loxr")
+region = Rect2(40, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqp1s"]
+atlas = ExtResource("1_4loxr")
+region = Rect2(48, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kf25p"]
+atlas = ExtResource("1_4loxr")
+region = Rect2(56, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ko1a2"]
+atlas = ExtResource("1_4loxr")
+region = Rect2(64, 0, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xua3y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7qs3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31xbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbqqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyj7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c6vv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qvtx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqp1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kf25p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ko1a2")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}]
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_kwipl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xua3y")
+animation = &"idle_down"
+autoplay = "idle_down"
+frame_progress = 0.690489
