@@ -930,16 +930,24 @@ animations = [{
 radius = 2.5
 height = 5.0
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["Player"]]
 z_index = 1
 y_sort_enabled = true
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_kwipl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xua3y")
-animation = &"idle_down"
-autoplay = "idle_down"
+animation = &"idle_up"
+autoplay = "idle_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 3.5)
+position = Vector2(2.08165e-12, 3.5)
 shape = SubResource("CapsuleShape2D_ps0ic")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 192
+limit_bottom = 192
